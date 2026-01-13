@@ -380,8 +380,8 @@ a strong result. This MobileViT mobile is fully compatible with TensorFlow Lite 
 and can be converted with the following code:
 """
 
-# Serialize the model as a SavedModel.
-tf.saved_model.save(mobilevit_xxs, "mobilevit_xxs")
+# Serialize the model to a SavedModel.
+mobilevit_xxs.export("mobilevit_xxs")
 
 # Convert to TFLite. This form of quantization is called
 # post-training dynamic-range quantization in TFLite.
