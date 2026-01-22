@@ -65,7 +65,7 @@ are less reliable.
 
 This tutorials uses the 12 commands (class) public SSVEP dataset [2] with the following
 interface emulating a phone dialing numbers.
-![dataset](/img/eeg_bci_ssvepformer/eeg_ssvepformer_dataset1_interface.jpg)
+![dataset](/img/examples/timeseries/eeg_bci_ssvepformer/eeg_ssvepformer_dataset1_interface.jpg)
 
 The dataset was recorded with 10 participants, each faced the above 12 SSVEP stimuli (A).
 The stimulation frequencies ranged from 9.25Hz to 14.75 Hz with 0.5Hz step, and phases
@@ -282,7 +282,7 @@ frequency). we see clear peaks showing the high responses from that subject whic
 that this subject is a good candidate for SSVEP BCI control. In many cases the peaks
 are weak or absent, meaning that subject do not achieve the task correctly.
 
-![eeg_frequency](/img/eeg_bci_ssvepformer/eeg_ssvepformer_frequencypowers.png)
+![eeg_frequency](/img/examples/timeseries/eeg_bci_ssvepformer/eeg_ssvepformer_frequencypowers.png)
 """
 
 
@@ -296,7 +296,7 @@ the concatenation of frequency and phase information in a fixed frequency band. 
 the model in an end-to-end format, we implement the complex spectrum transformation as
 non-trainable layer.
 
-![model](/img/eeg_bci_ssvepformer/eeg_ssvepformer_model.jpg)
+![model](/img/examples/timeseries/eeg_bci_ssvepformer/eeg_ssvepformer_model.jpg)
 The SSVEPFormer unlike the Transformer architecture does not contain positional encoding/embedding
 layers which replaced a channel combination block that has a layer of Conv1D layer of 1
 kernel size with double input channels (double the count of electrodes) number of filters,
@@ -622,13 +622,13 @@ and PyTorch) on the three GPUs available with Colab Free/Pro/Pro+: T4, L4, A100.
 """
 ## Training Time
 
-![training_time](/img/eeg_bci_ssvepformer/eeg_ssvepformer_keras_training_time.png)
+![training_time](/img/examples/timeseries/eeg_bci_ssvepformer/eeg_ssvepformer_keras_training_time.png)
 """
 
 """
 # Inference Time
 
-![inference_time](/img/eeg_bci_ssvepformer/eeg_ssvepformer_keras_inference_time.png)
+![inference_time](/img/examples/timeseries/eeg_bci_ssvepformer/eeg_ssvepformer_keras_inference_time.png)
 """
 
 """
